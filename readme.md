@@ -175,7 +175,39 @@ Person-->json
       如何处理复杂对象重排
       重写hashcode和equals的注意事项
    
+   ### 商品模块
+   #### 功能介绍
+   前台功能
+          产品搜索          
+          动态排序列表
+          商品详情 
+   后台功能
+       商品列表
+       商品搜索
+       图片上传
+       富文本上传
+       商品详情
+       商品上下架
+       增加商品    
+       更新商品
+   ####学习目标
+   FTP服务的对接
+   SpringMVC文件上传
+   流读取Properties配置文件
+   抽象POJO、BO、VO对象之间的转换关系及解决思路
+   joda-time快速入门
+   静态块
+   Mybatis-PageHelper高效准确地分页及动态排序
+   Mybatis对List遍历的实现方法
+   Mybatis对Where语句动态拼接
+   POJO、BO business object、VO view object
+   POJO、VO
    
+  ### 购物车模块
+  ####学习目标
+   购物车模块的设计思想
+   如何封装一个高复用的购物车核心方法
+   解决浮点型在商业运算中丢失精度的问题
    
    
    

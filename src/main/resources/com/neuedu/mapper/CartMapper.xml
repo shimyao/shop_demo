@@ -22,6 +22,15 @@
     delete from cart
     where id = #{id,jdbcType=INTEGER}
   </delete>
+  <delete id="batchDelete" parameterType="list">
+     delete from cart
+     <where>
+        id in
+       <foreach collection="list" item="cart" open="(" close=")" separator=",">
+         #{cart.id}
+       </foreach>
+     </where>
+  </delete>
   <insert id="insert" parameterType="com.pojo.Cart">
     <!--
       WARNING - @mbg.generated
@@ -102,6 +111,10 @@
   </update>
 <select id="get_cart_product_count" parameterType="int" resultType="int">
    select ifnull(sum(quantity),0) from cart where user_id=#{userId}
+</select>
+<select id="findCartListByUserIdAndChecked" parameterType="int" resultMap="BaseResultMap">
+    select id, user_id, product_id, quantity, checked, create_time, update_time
+    from cart where user_id=#{userId} and checked=1
 </select>
 
 </mapper>
